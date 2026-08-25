@@ -58,7 +58,7 @@ variable "igw_name" {
   default     = "photoshare-igw"
 }
 
-variable "nat_gateway_name" { 
+variable "nat_gateway_name" {
   type        = string
   description = "Name of the NAT Gateway"
   default     = "photoshare-nat-gw"
@@ -69,5 +69,20 @@ variable "public_route_table_name" {
   description = "Name of the Public Route Table"
   default     = "public-rt"
 }
-
+variable "db_identifier" {
+  type    = string
+  default = "photoshare-db"
+}
+variable "db_name" {
+  type    = string
+  default = "photoshare"
+}
+variable "db_username" {
+  type    = string
+  default = "admin"
+}
+variable "db_password" {
+  type    = string
+  default = ""
+}
 
