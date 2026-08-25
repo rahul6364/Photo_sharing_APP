@@ -47,3 +47,26 @@ output "db_secret_name" {
   description = "Name of the PhotoShare database secret"
   value       = module.secrets.secret_name
 }
+output "s3_bucket_name" {
+  description = "PhotoShare S3 bucket name"
+  value       = module.s3.bucket_id
+}
+
+output "s3_bucket_arn" {
+  description = "PhotoShare S3 bucket ARN"
+  value       = module.s3.bucket_arn
+}
+output "alb_dns_name" {
+  description = "PhotoShare Application Load Balancer DNS name"
+  value       = module.alb.alb_dns_name
+}
+
+output "alb_security_group_id" {
+  description = "PhotoShare ALB security group ID"
+  value       = module.alb.alb_security_group_id
+}
+
+output "target_group_arn" {
+  description = "PhotoShare target group ARN"
+  value       = module.alb.target_group_arn
+}

@@ -1,4 +1,4 @@
-# IAM Role for EC2 Service
+
 resource "aws_iam_role" "ec2" {
   name = "iam_role_ec2"
 
@@ -16,7 +16,12 @@ resource "aws_iam_role" "ec2" {
   })
 }
 
-# Policy Attachments for EC2 Role
+
+resource "aws_iam_instance_profile" "ec2" {
+  name = "iam_role_ec2"
+  role = aws_iam_role.ec2.name
+}
+
 resource "aws_iam_role_policy_attachment" "ec2_s3" {
   role       = aws_iam_role.ec2.name
   policy_arn = "arn:aws:iam::aws:policy/AmazonS3FullAccess"
