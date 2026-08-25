@@ -37,3 +37,13 @@ output "rds_security_group_id" {
   description = "RDS security group ID"
   value       = module.rds.db_security_group_id
 }
+
+output "db_secret_arn" {
+  description = "ARN of the PhotoShare database secret"
+  value       = module.secrets.secret_arn
+}
+
+output "db_secret_name" {
+  description = "Name of the PhotoShare database secret"
+  value       = module.secrets.secret_name
+}
